@@ -1,6 +1,5 @@
-from aiogram.utils.keyboard import ReplyKeyboardBuilder
 from aiogram import types
-from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, KeyboardButton
 
 def keyboardMain():
     '''builder = ReplyKeyboardBuislder()
@@ -16,6 +15,12 @@ def keyboardMain():
 def keyboardPay():
     return InlineKeyboardMarkup(inline_keyboard=[[
         InlineKeyboardButton(text='Базовый курс', callback_data='базовый курс'),
-        InlineKeyboardButton(text='Расширенный курс', callback_data='расширенный курс')]])
+        InlineKeyboardButton(text='Расширенный курс', callback_data='расширенный курс')],[
+        InlineKeyboardButton(text='Назад', callback_data='Назад')]])
+
+def keyboardMenu():
+    return InlineKeyboardMarkup(inline_keyboard=[[
+        InlineKeyboardButton(text='Купить', callback_data='buy')],[
+        InlineKeyboardButton(text='Меню', callback_data='menu')]])
     
 
